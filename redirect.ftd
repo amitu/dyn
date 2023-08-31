@@ -1,0 +1,12 @@
+
+-- import: fastn/processors as pr
+
+-- optional string company:
+$processor$: pr.request-data
+
+
+-- ftd.redirect: /http/
+if: { company != NULL }
+
+
+-- ftd.text: you did not pass company

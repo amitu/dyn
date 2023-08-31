@@ -1,0 +1,2 @@
+-- ftd.text: this is the documentation
+role: $inherited.types.heading-small

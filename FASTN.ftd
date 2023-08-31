@@ -1,0 +1,29 @@
+-- import: fastn
+
+-- fastn.package: dyn
+
+
+-- fastn.dynamic-urls:
+
+# User Profile Page
+  url: /u/<string:name>/
+  document: profile.ftd
+
+
+
+
+
+-- fastn.redirects:
+
+/twitter/: https://twitter.com/amitu
+
+
+
+
+
+-- fastn.sitemap:
+
+# Site
+
+- Docs: /docs/
+  document: documentation.ftd

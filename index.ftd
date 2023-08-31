@@ -1,0 +1,46 @@
+-- ftd.column:
+width: fill-container
+padding.px: 20
+
+-- ftd.text: overview
+role: $inherited.types.heading-small
+padding.px: 20
+
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+padding.px: 20
+
+- making an http request: [http.ftd](/http/)
+- sql query: [sql.ftd](/sql/)
+- dynamic url: [profile.ftd](/u/amitu/)
+- query parameter: [/amitu/?company=FifthTry](/u/amitu/?company=FifthTry)
+- redirect: [/twitter/](/twitter/)
+- ftd.redirect: [redirect.ftd](/redirect/)
+- custom url: [documentation.ftd -> /docs/](/docs/)
+
+
+-- ftd.code:
+lang: sh
+role: $inherited.types.source-code
+
+# to create db
+psql -c "CREATE DATABASE lu" template1
+
+# to connect to db
+psql lu
+
+
+
+-- ftd.text: content of `.env` file
+role: $inherited.types.copy-large
+padding.px: 20
+
+
+-- ftd.code:
+lang: sh
+role: $inherited.types.source-code
+
+export FASTN_PG_URL=postgres://amitu:@localhost:lu
+
+-- end: ftd.column

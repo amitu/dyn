@@ -1,0 +1,17 @@
+-- import: fastn/processors as pr
+
+-- string name:
+$processor$: pr.request-data
+
+-- ftd.text: $name
+
+
+
+
+
+-- optional string company:
+$processor$: pr.request-data
+
+
+-- ftd.text: $company
+if: { company != NULL }

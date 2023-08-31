@@ -1,0 +1,80 @@
+-- import: fastn/processors as pr
+
+
+
+-- result r:
+$processor$: pr.http
+url: https://api.github.com/search/repositories
+sort: stars
+order: desc
+q: language:rust
+
+
+
+
+-- ftd.row:
+spacing.fixed.px: 10
+margin.px: 20
+background.solid: yellow
+
+-- ftd.text: Number Of Repos
+role: $inherited.types.copy-regular
+
+-- ftd.integer: $r.total_count
+role: $inherited.types.copy-regular
+
+-- end: ftd.row
+
+
+
+
+
+
+
+-- show-repo: $repo
+for: repo in $r.items
+
+
+
+
+
+
+
+
+
+-- record repo:
+string full_name:
+string description:
+string html_url:
+integer stargazers_count:
+integer watchers_count:
+
+-- record result:
+integer total_count: 0
+repo list items:
+
+
+
+-- component show-repo:
+caption repo r:
+
+
+-- ftd.column:
+border-width.px: 2
+padding.px: 20
+margin.px: 20
+
+-- ftd.row:
+spacing.fixed.px: 10
+role: $inherited.types.copy-regular
+
+
+-- ftd.text: $show-repo.r.full_name
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+
+
+-- end: show-repo

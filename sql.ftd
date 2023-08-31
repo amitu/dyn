@@ -1,0 +1,80 @@
+-- import: fastn/processors as pr
+
+
+
+
+-- user list people:
+$processor$: pr.pg
+
+SELECT * FROM users order by name asc;
+
+
+
+
+
+-- show-person: $p
+for: $p in $people
+
+
+
+
+
+
+
+
+-- record user:
+integer id:
+string name:
+string department:
+
+
+
+
+
+
+
+
+-- component show-person:
+caption user p:
+
+-- ftd.column:
+spacing.fixed.px: 10
+border-width.px: 2
+margin.px: 20
+padding.px: 20
+
+
+-- ftd.text: Person
+role: $inherited.types.heading-small
+
+-- label-text: Name
+value: $show-person.p.name
+
+-- label-text: Department
+value: $show-person.p.department
+
+-- end: ftd.column
+
+-- end: show-person
+
+
+
+-- component label-text:
+caption name:
+string value:
+
+-- ftd.row:
+spacing.fixed.px: 10
+role: $inherited.types.copy-regular
+
+-- ftd.text:
+
+$label-text.name
+
+-- ftd.text:
+
+$label-text.value
+
+-- end: ftd.row
+
+-- end: label-text
